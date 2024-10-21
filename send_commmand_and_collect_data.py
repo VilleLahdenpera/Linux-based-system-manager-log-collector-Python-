@@ -1,6 +1,6 @@
 import paramiko, datetime, os
 
-def command(address, user, passwd, command):
+def command(address, user, passwd, command): #Send command to ssh client
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -17,7 +17,7 @@ def command(address, user, passwd, command):
 
 
 
-def downloadData(address, user, passwd, name, location):
+def downloadData(address, user, passwd, name, location): #Download data from ssh client
     try:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())

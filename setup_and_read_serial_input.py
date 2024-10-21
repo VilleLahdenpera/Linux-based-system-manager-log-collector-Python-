@@ -1,6 +1,6 @@
 import serial, os, datetime
 
-def setupSer(port, baud): #Setup serial connection
+def setupSerial(port, baud): #Setup serial connection
     try:
         ser=serial.Serial(port=port,baudrate=baud,parity=serial.PARITY_NONE,stopbits=serial.STOPBITS_ONE,bytesize=serial.EIGHTBITS,timeout=1) #Serial port configuration
         try:
@@ -12,7 +12,7 @@ def setupSer(port, baud): #Setup serial connection
     return ser
 
 
-def readSer(ser, expect, buffer): #Read serial port for expected return
+def readSerial(ser, expect, buffer): #Read serial port for expected return
     try: 
         lines=0
         while lines < 10:

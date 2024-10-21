@@ -1,6 +1,6 @@
 import time
 
-def enableLMI(self, ser, settings, delay, enter, login, retry, flag, user, passwd): #Log in and enable system log collection
+def enableLogCollection(self, ser, settings, delay, enter, login, retry, flag, user, passwd): #Log in and enable system log collection
     try:
         ser.open() #Open serial connection
         while retry <= 10: #Retry 10 times if no success
